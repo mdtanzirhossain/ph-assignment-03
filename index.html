@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pets</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
@@ -18,18 +18,21 @@
             extend: {
               colors: {
                 clifford: '#da373d',
-                
+              },
+              fontFamily: {
+                adlam: ["ADLaM Display", serif],
               },
               fontFamily: {
                 sora: ["Sora", serif],
-              }
+              },
+              
             }
           }
         }
       </script>
 </head>
 <body>
-    <header class="container font-[sora] w-full mx-auto bg-[#FFF9F4]">
+    <header class="border-[0.5px] md:border-0 font-[sora] w-full mx-auto bg-[#FFF9F4]">
         
         <nav class="flex justify-between pt-3 pb-3 pr-4 pl-4 md:flex md:justify-evenly items-center gap-4py-6">
           <!-- header left -->
@@ -60,12 +63,30 @@
                 <button class=" border border-[#FFDC26] px-[30px] py-[10px] rounded-[8px]">Login</button>
                 <button class="">Register</button>
               </div>
-              <div class="">
+              <div class="w-5 h-5 text-xl md:hidden">
                 <i class="fa-solid fa-bars"></i>
-              </div>
+              </div> 
             </div>
           </div>
         </nav>
     </header>
+    <!-- main sections start here -->
+    <main>
+      <!-- hero section starts here -->
+      <section class="pt-8 px-4 lg:px-[140px]">
+        <div class="md:relative w-auto md:w-[1320px] md:h-[749px] md:mx-auto ">
+          <div class="md:absolute lg:left-30 w-[1320px] flex flex-col gap-4 mx-auto">
+            <h1 class="text-3xl">Pamper Your Pet,<br> Because They Deserve <br>the Bes</h1>
+            <p class="z-1 font-[sora] w-88">Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!</p>
+            <button class="z-1 flex items-center w-36 h-10 font-[sora] px-8 py-3 bg-[#FFDC26] rounded-[8px]">Find a pet</button>
+          </div>
+          <div class="absolute top-70">
+            <img src="assets/cat-big.png" alt="cat">
+          </div>
+        </div>
+      </section>
+      <!-- hero section ends here -->
+       <!-- category section starts here -->
+    </main>
 </body>
 </html>
