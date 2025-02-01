@@ -4,5 +4,8 @@ module.exports = {
     theme: {
       extend: {},
     },
+    fontFamily: {
+      adlam: ["ADLaM Display", serif],
+    },
     plugins: [],
   }
