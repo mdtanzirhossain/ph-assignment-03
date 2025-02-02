@@ -12,27 +12,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8aa29afb77.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              },
-              fontFamily: {
-                adlam: ["ADLaM Display", serif],
-              },
-              fontFamily: {
-                sora: ["Sora", serif],
-              },
-              
-            }
-          }
+    
+      <style type="text/tailwindcss">
+        @theme {
+          --color-clifford: #da373d;
+          --font-primary:"ADLaM Display", serif;
+          --font-secondary:"Sora", serif;
         }
-      </script>
+      </style>
 </head>
 <body class="m-0 p-0">
-    <header class="border-[0.5px] md:border-0 font-[sora] w-full mx-auto bg-[#FFF9F4] md:mx-auto">
+    <header class="border-[0.5px] md:border-0 font-secondary w-full mx-auto bg-[#FFF9F4] md:mx-auto">
         
         <nav class="flex justify-between pt-3 pb-3 pr-4 pl-4 md:flex md:justify-evenly items-center gap-4py-6">
           <!-- header left -->
@@ -47,7 +37,7 @@
           </div>
           <!-- header middle -->
           <div class="">
-              <ul class="hidden md:flex gap-3">
+              <ul class="hidden md:flex gap-3 font-secondary">
                 <li><a href="">Find a pet</a></li>
                 <li><a href="">Breeds</a></li>
                 <li><a href="">Contact us</a></li>
@@ -76,8 +66,8 @@
       <section class="pt-8 px-4 lg:px-[140px]">
         <div class="md:relative w-auto md:w-[1280px] md:h-[749px] md:mx-auto">
           <div class="md:absolute lg:left-3 w-[1320px] flex flex-col gap-4 mx-auto lg:z-1">
-            <h1 class="text-3xl font-[adlam] font-bold">Pamper Your Pet,<br> Because They Deserve <br>the Bes</h1>
-            <p class="z-1 font-[sora] w-88">Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!</p>
+            <h1 class="text-[30px] font-primary font-bold z-3">Pamper Your Pet,<br> Because They Deserve <br>the Bes</h1>
+            <p class="z-1 font-secondary w-88">Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!</p>
             <button class="z-1 flex items-center w-36 h-10 font-[sora] px-8 py-3 bg-[#FFDC26] rounded-[8px] lg:transform hover:scale-110 transition-transform group-hover:bg-green-700">Find a pet</button>
           </div>
           <div class="absolute top-70 lg:-top-29 lg:left-10 lg:-z-1">
@@ -88,8 +78,8 @@
       <!-- hero section ends here -->
        <!-- category section starts here -->
         <section class="my-1 2 mx-auto lg:w-[1280px]">
-          <h1 class="text-left pl-4 pb-8 font-bold font-[adlam] lg:text-[36px] mt-40 lg:mt-0 text-[24px]">Browse By Categories</h1>
-          <div class="pl-4 grid grid-cols-2 justify-center items-center gap-2.5 lg:grid-cols-6 lg:grid-rows-1 lg:gap-6 w-auto">
+          <h1 class="text-left pl-4 pb-8 font-bold font-primary lg:text-[36px] mt-40 lg:mt-0 text-[24px]">Browse By Categories</h1>
+          <div class="font-secondary pl-4 grid grid-cols-2 justify-center items-center gap-2.5 lg:grid-cols-6 lg:grid-rows-1 lg:gap-6 w-auto">
             <div class="w-full bg-[#F9DF8A] rounded-xl flex justify-center items-center flex-col w-[148px] lg:w-[200px] h-[221px]">
               <div class="rounded-full w-[90px] h-[90px] flex justify-center items-center lg:w-[104px] lg:h-[104px] bg-[#FFFFFF] lg:flex lg:justify-center lg:items-center ">
                 <img src="assets/dog-cartoon.png" alt="dog cartoon">
@@ -137,7 +127,7 @@
        <!-- category section ends here -->
        <!-- trending product section ends here -->
        <section class="w-[11/12] lg:w-[1280px] lg:w-9/12 mx-auto">
-        <h1 class="pl-4 pt-8 text-3xl font-bold mb-8 lg:mt-35 lg:align-left">Trending Pet Products</h1>
+        <h1 class="pl-2 pt-8 text-4xl font-bold mb-8 lg:mt-35 lg:align-left font-primary">Trending Pet Products</h1>
         <div class="lg:flex lg:justify-center lg:items-center lg:gap-2">
           <div class="w-11/12 lg:w-auto pl-4 lg:pl-0">
             <div class="mt-14 mb-8">
@@ -155,7 +145,7 @@
               <div class="shadow-lg lg:shadow-none flex justify-center lg:justify-start items-center lg:items-center lg:gap-4 lg:pl-4 gap-2.5 border-1 rounded-xl border-[#EAEBEC] font-[sora] lg:w-[275px] lg:h-[118px]">
                 <!-- product image -->
                 <div class="bg-[#FFF9F4] w-[54px] h-[54px] lg:w-[86px] lg:h-[86px] relative">
-                  <img  class="absolute inset-0 m-auto flex justify-center items-center" src="assets/pet-couch.png" alt="product">
+                  <img class="absolute inset-0 m-auto flex justify-center items-center" src="assets/pet-couch.png" alt="product">
                 </div>
                 <!-- product content -->
                 <div class="flex flex-col gap-1">
@@ -288,13 +278,7 @@
                 </div>
               </div>
               
-              
-              
-              
-              
-              
-              
-              
+  
               
             </div>
           </div>
@@ -304,21 +288,21 @@
        <!-- price section starts here -->
         <section class="px-4 lg:px-0 mt-14 mb-32 lg:w-[1280px] lg:mx-auto">
           <div class="">
-            <h1 class="lg:text-center font-[adlam] text-[36px] font-bold lg:mb-12 lg:text-left pb-8">Everyday low Price</h1>
+            <h1 class="lg:text-center font-[adlam] text-[36px] font-bold lg:mb-12 lg:text-left pb-8 font-primary">Everyday low Price</h1>
             <!-- pet grooming mitt -->
              <div class="lg:flex lg:justify-center lg:gap-6 space-y-4">
                 <div class="w-[357px] h-[335px] lg:w-[700px] bg-[linear-gradient(to_right,#F7CCFB,#AFD2FD)] lg:pl-20 lg:pt-10 relative">
-                  <p class="hidden lg:inline-block text-2xl font-medium pl-8 pt-9 lg:text-[20px]">Under Price</p>
-                  <h1 class="text-2xl font-bold pl-8 pt-9 font-[adlam]">Pet Grooming Mitt</h1>
-                  <h1 class="hidden lg:inline-block text-4xl text-white pl-8 pt-3 font-bold">Easy Hair Removal</h1>
-                  <p class="text-4xl text-white lg:text-[#000000] pl-8 pt-3 font-bold">$7.99</p>
+                  <p class="hidden lg:inline-block text-2xl font-medium pl-8 pt-9 lg:text-[20px] font-secondary">Under Price</p>
+                  <h1 class="text-2xl font-bold pl-8 pt-9 font-primary">Pet Grooming Mitt</h1>
+                  <h1 class="hidden lg:inline-block text-4xl text-white pl-8 pt-3 font-bold font-primary">Easy Hair Removal</h1>
+                  <p class="text-4xl text-white lg:text-[#000000] pl-8 pt-3 font-bold font-primary">$7.99</p>
                   <img src="assets/cute-dog-mid.png" alt="cute-dog"class="absolute bottom-4 right-2 w-48">
                 
                 </div>
                 <!-- t-shirt for dogs -->
                 <div class="w-[357px] h-[335px] lg:w-[540px] bg-[linear-gradient(to_right,#FFF9F4,#F9DF8A)] relative">
-                  <h1 class="text-2xl font-bold pl-8 pt-9">T-shirt for Dogs</h1>
-                  <p class="text-4xl text-[#FFDC26] pl-8 pt-3 font-bold" >$7.99</p>
+                  <h1 class="text-2xl font-bold pl-8 pt-9 font-primary">T-shirt for Dogs</h1>
+                  <p class="text-4xl text-[#FFDC26] pl-8 pt-3 font-bold font-primary" >$7.99</p>
                   <img src="assets/cute-pet-mid.png" alt="cute-dog"class="absolute bottom-4 right-2 w-48">
                 
                 </div>
@@ -329,8 +313,8 @@
         <!-- customer feedback section -->
          
         <section class="lg:w-[1280px] lg:mx-auto lg:flex lg:flex-col lg:justify-center lg:items-center lg:mb:140 lg:mb-35">
-          <h1 class="text-center font-bold text-4xl mb-8 text-left pl-4">Our Customers - Their Recomendation</h1>
-          <div class="lg:flex lg:flex-row lg:gap-20 flex flex-col gap-10 justify-items-start">
+          <h1 class="text-center font-bold text-4xl mb-8 text-left pl-4 font-primary">Our Customers - Their Recomendation</h1>
+          <div class="lg:flex lg:flex-row lg:gap-20 flex flex-col gap-10 justify-items-start font-secondary">
             <div class="drop-shadow-2xl lg:drop-shadow-2xl max-w-lg mx-auto bg-white shadow-lg rounded-2xl p-6 text-center">
               <img src="assets/gamer.png" alt="Customer" 
                    class="w-16 h-16 mx-auto rounded-full border-2 border-blue-500">
@@ -382,10 +366,10 @@
               </div>
             <!-- content part -->
             <div class="flex flex-col justify-center items-center absolute -bottom-6 left-5.5">
-              <h1 class="mt-8 mb-3 lg:font-bold">Get Pawsome News!</h1>
-              <p class="text-center mb-5">Exclusive training tips, ticks, product<br> deals and more.</p>
-              <input type="email" name="" id="" placeholder="Enter email...." class="bg-[#FFFFFF] w-[312px] h-[42px] pl-2">
-              <button class="flex items-center w-36 h-10 font-[sora] px-8 py-3 mb-12 mt-3 bg-[#FFDC26] rounded-[8px]">Subscribe</button>
+              <h1 class="mt-8 mb-3 lg:font-bold font-primary">Get Pawsome News!</h1>
+              <p class="text-center mb-5 font-secondary">Exclusive training tips, ticks, product<br> deals and more.</p>
+              <input type="email" name="" id="" placeholder="Enter email...." class="bg-[#FFFFFF] w-[312px] h-[42px] pl-2 font-secondary">
+              <button class="flex items-center w-36 h-10 font-[sora] px-8 py-3 mb-12 mt-3 bg-[#FFDC26] rounded-[8px] font-secondary">Subscribe</button>
             </div>
           </div>
           
@@ -398,10 +382,10 @@
             <img src="assets/cute-pet-mid.png" alt="dog" class="pl-20 pb-9.5 pt-9.5" >
           </div>
           <div class="">
-            <h1 class="lg:text-4xl text-[adlam] lg:font-bold">Get Pawsome News!</h1>
-            <p class="md:text-xl pt-5 pb-9.5">Exclusive training tips, ticks, product deals and more.</p>
-            <input type="email" name="" id="" placeholder="Enter email...." class="bg-[#FFFFFF] w-[312px] lg:w-[472px] h-[42px] pl-4 ">
-            <button class="flex items-center w-36 h-10 font-[sora] px-8 py-3 mb-12 lg:mt-9.5 bg-[#FFDC26] rounded-[8px]">Subscribe</button>
+            <h1 class="lg:text-4xl text-[adlam] lg:font-bold font-primary">Get Pawsome News!</h1>
+            <p class="md:text-xl pt-5 pb-9.5 font-secondary">Exclusive training tips, ticks, product deals and more.</p>
+            <input type="email" name="" id="" placeholder="Enter email...." class="bg-[#FFFFFF] w-[312px] lg:w-[472px] h-[42px] pl-4 font-secondary ">
+            <button class="flex items-center w-36 h-10 font-[sora] px-8 py-3 mb-12 lg:mt-9.5 bg-[#FFDC26] rounded-[8px] font-secondary">Subscribe</button>
           </div>
 
           
@@ -412,14 +396,14 @@
         </main>
        <!-- subscription section ends here -->
        <!-- footern section starts here -->
-        <section class="w-[392px] h-[752px] bg-[#F9DF8A] absolute top-1060 pl-4 lg:hidden">
+        <section class="w-[392px] h-[752px] bg-[#F9DF8A] absolute top-1060 pl-4 lg:hidden font-secondary">
           <div class="pt-70">
             <!-- 1st div -->
              <div class="flex flex-col pl-4 gap-7 pt-14">
               <div class="flex gap-2 items-center">
                 <div><img src="assets/logo-footer.png" alt="paw">
                 </div>
-                <h2>Browse<span class="text-[#FFDC26]">4</span>Pets</h2>
+                <h2  >Browse<span class="text-[#FFDC26]">4</span>Pets</h2>
               </div>
               <div><p>Discover a world of treats, toys, and essentials handpicked for your furry friends</p></div>
             </div>
@@ -444,7 +428,7 @@
           </div>
         </section >
 
-        <section class="hidden lg:w-full lg:h-[654px] lg:bg-[#F9DF8A] lg:block absolute top-820 -z-2">
+        <section class="hidden lg:w-full lg:h-[654px] lg:bg-[#F9DF8A] lg:block absolute top-820 -z-2 font-secondary">
           <div class="lg:w-[1280px] lg:mx-auto lg:mt-90 lg:flex lg:justify-between">
             <!-- 1st div -->
              <div class="lg:flex lg:flex-col lg:gap-6">
